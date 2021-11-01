@@ -1,32 +1,29 @@
 # citygml-tools
-citygml-tools is a command line utility that bundles several operations for processing CityGML files.
+citygml-toolsは、CityGMLファイルを処理するためのいくつかの操作をバンドルするコマンドラインユーティリティです.
 
-## License
-citygml-tools is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
-See the `LICENSE` file for more details.
+## ライセンス
+citygml-toolsは、[Apache License、Version 2.0]（http://www.apache.org/licenses/LICENSE-2.0）の下でライセンスされています.
+詳細については、 `LICENSE`ファイルを参照してください。
 
-## Latest release
-The latest stable release of citygml-tools is 1.4.3.
+## 最新のリリース
+citygml-toolsの最新の安定したリリースは1.4.3です.
 
-Download the citygml-tools 1.4.3 release binaries
-[here](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip). Previous releases
-are available from the [releases section](https://github.com/citygml4j/citygml-tools/releases).
+citygml-tools1.4.3 リリースバイナリをダウンロードします
+[ここ](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip). 以前のバージョンは[リリースセクション](https://github.com/citygml4j/citygml-tools/releases)から入手できます.
 
-## Contributing
-* To file bugs found in the software create a GitHub issue.
-* To contribute code for fixing filed issues create a pull request with the issue id.
-* To propose a new feature create a GitHub issue and open a discussion.
+## 貢献するには
+*　ソフトウェアで見つかったバグを報告するには、GitHubのissueを作成してください.
+*　提出された問題を修正するためのコードを提供するには、問題IDを使用してプルリクエストを作成してください.
+*　新しい機能を提案するには、GitHubのissueを作成し、ディスカッションを開始してください.
 
-## Using citygml-tools
-Download and unzip the latest release or [build](https://github.com/citygml4j/citygml-tools#building) the program from
-source. Afterwards, open a shell environment and run the `citygml-tools` script from the program folder to launch the
-program.
+## citygml-tools の使用法
+最新リリースをダウンロードして解凍するかソースからビルドします[ビルド](https://github.com/citygml4j/citygml-tools#building). その後、シェル環境を開き、プログラムフォルダから `citygml-tools` スクリプトを実行してプログラムを起動します.
 
-To show the help message and all available commands of citygml-tools, simply type the following:
+ヘルプメッセージとcitygml-toolsで使用可能なすべてのコマンドを表示するには、次のように入力します:
 
     > citygml-tools --help
 
-This will print the following usage information:
+すると、次の使用情報が出力されます:
 
 ```
 Usage: citygml-tools [-hV] [--log-file=<file>] [--log-level=<level>]
@@ -50,66 +47,55 @@ Commands:
   to-cityjson       Converts CityGML files into CityJSON.
 ```
 
-To get help about a specific command of citygml-tools, enter the following and replace `COMMAND` with the name of
-the command you want to learn more about:
+citygml-toolsの特定のコマンドに関するヘルプを取得するには、次のように入力し、 `COMMAND`　を詳細を知りたいコマンドの名前に置き換えます:
 
     > citygml-tools help COMMAND
 
-The following example shows how to use the `to-cityjson` command to convert a CityGML file into CityJSON:
+次の例は、 `to-cityjson`コマンドを使用してCityGMLファイルをCityJSONに変換する方法を示しています:
 
     > citygml-tools to-cityjson /path/to/your/CityGML.gml
 
-## System requirements
+## システム要件
 * Java JRE or JDK >= 1.8
   
-citygml-tools can be run on any platform providing appropriate Java support. 
+citygml-toolsは、適切なJavaサポートを提供する任意のプラットフォームで実行できます. 
 
-## Docker image
+## Docker イメージ
 
-citygml-tools is also available as Docker image. You can either build the image yourself using the provided `Dockerfile`
-or use a pre-built image from Docker Hub: https://hub.docker.com/r/citygml4j/citygml-tools.
 
-To build the image, clone the repository to your local machine and run the following command from the root of the
-repository:
+citygml-toolsはDockerイメージとしても利用できます。提供されている `Dockerfile`を使用して自分でイメージをビルドするか、DockerHubからビルド済みのイメージを利用できます: https://hub.docker.com/r/citygml4j/citygml-tools.
+
+イメージをビルドするには、リポジトリをローカルマシンに複製し、リポジトリのルートから次のコマンドを実行します:
 
     > docker build -t citygml-tools .
 
-### How to use the image
+### イメージの使い方
     
-Using citygml-tools via docker is simple:
+dockerを介してcitygml-toolsを使用するのは簡単です:
  
      > docker run --rm citygml-tools
      
- This will show the help message and all available commands of citygml-tools.
+ すると、citygml-toolsのヘルプメッセージと使用可能なすべてのコマンドが表示されます.
  
- The following command mounts a volume and runs the `to-cityjson` command of citygml-tools on all CityGML files 
- in the mounted volume.
+ 次のコマンドは、ボリュームをマウントし、マウントされたボリューム内のすべてのCityGMLファイルに対してcitygml-toolsの `to-cityjson`コマンドを実行します.
 
     > docker run --rm -u 1000 -v /path/to/your/data:/data citygml-tools to-cityjson /data
 
-Use the `-u` parameter to pass the username or UID of your current host's user to set the correct file permissions on
-generated files in the mounted directory.
+`-u`パラメータを使用して、現在のホストのユーザーのユーザー名またはUIDを渡し、マウントされたディレクトリに生成されたファイルに正しいファイル権限を設定します.
 
-### Technical details
+### 詳細な技術情報
 
-The citygml-tools image uses [OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux to keep the resulting images
-small. Additionally, it is written as multi-stage image, which means the "JDK image" is only used for building, while
-the final application gets wrapped in a smaller "JRE image".
+citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux を作成するイメージのサイズを小さくするために利用しています. さらに、マルチステージイメージとして記述され、「JDKイメージ」はビルドにのみ使用するため、最終的なアプリケーションはより小さな「JREイメージ」にラップされます.
 
-By default, the container process is executed as non-root user. The included entrypoint script allows the image also to
-be used in OpenShift environments, where an arbitrary user might be created on container start.
+デフォルトでは、コンテナプロセスはroot以外のユーザーとして実行されます。含まれているエントリーポイントスクリプトを使用すると、コンテナーの開始時に任意のユーザーが作成される可能性のあるOpenShift環境でもイメージを使用できます.
 
-The default working directory inside the container is `/data`.
+コンテナ内のデフォルトの作業ディレクトリは `/data` です.
 
-## Using citygml-tools as library
-citygml-tools is not just a CLI program. Most commands are also available as separate JAR libraries. Simply put the
-library file from the `lib` folder on your classpath to use the operation in your citygml4j project. The
-`citygml-tools-common-<version>.jar` library renders a mandatory dependency for all commands.
+## citygml-tools をライブラリとして利用
 
-The libraries are also available as [Maven](http://maven.apache.org/) artifacts from the
-[Maven Central Repository](https://search.maven.org/search?q=org.citygml4j.tools). For example, to add the
-`global-app-mover` library for removing global appearances to your project with Maven, add the following code to your
-`pom.xml`. You may need to adapt the `global-app-mover` version number.
+citygml-toolsは単なるCLIプログラムではありません。ほとんどのコマンドは、個別のJARライブラリとしても利用できます。クラスパスの `lib`フォルダーからライブラリファイルを配置するだけで、citygml4jプロジェクトで操作を使用できます. `citygml-tools-common- <version> .jar`ライブラリは、すべてのコマンドに必須の依存関係をレンダリングします.
+
+ライブラリは、[Maven Central Repository]（https://search.maven.org/search?q=org.citygml4j.tools）から[Maven]（http://maven.apache.org/）アーティファクトとしても入手できます.　たとえば、Mavenを使用してプロジェクトにグローバルな外観を削除するための `global-app-mover`ライブラリを追加するには、次のコードを` pom.xml`に追加します. `global-app-mover`のバージョン番号を調整する必要があるかもしれません.
 
 ```xml
 <dependency>
@@ -119,7 +105,7 @@ The libraries are also available as [Maven](http://maven.apache.org/) artifacts 
 </dependency>
 ```
 
-Here is how you use `global-app-mover` with your Gradle project:
+Gradleプロジェクトで `global-app-mover`を使用する方法は次のとおりです:
 
 ```gradle
 repositories {
@@ -131,17 +117,13 @@ dependencies {
 }
 ```
 
-Note that all commands, which are not available as separate JAR library, just require a few lines of code with
-citygml4j. Check out the source code to see how they are implemented.
+個別のJARライブラリとして使用できないコマンドは、citygml4jを使用して数行のコードをだけで実装できます。ソースコードをチェックして、それらがどのように実装されているかを確認してください.
 
-## Building
-citygml-tools uses [Gradle](https://gradle.org/) as build system. To build the program from source, clone the
-repository to your local machine and run the following command from the root of the repository.
+## 建物
+citygml-toolsはビルドシステムとして[Gradle]（https://gradle.org/）を使用します。ソースからプログラムをビルドするには、リポジトリをローカルマシンに複製し、リポジトリのルートから次のコマンドを実行します.
 
     > gradlew installDist
     
-The script automatically downloads all required dependencies for building and running citygml-tools. So make sure you
-are connected to the internet. The build process runs on all major operating systems and only requires a Java 8 JDK or
-higher to run.
+スクリプトは、citygml-toolsの構築と実行に必要なすべての依存関係を自動的にダウンロードします。したがって、インターネットに接続していることを確認してください.ビルドプロセスはすべての主要なオペレーティングシステムで実行され、実行にはJava 8JDK以上が必要です.
 
-If the build was successful, you will find the citygml-tools package under `citygml-tools/build/install`.
+ビルドが成功した場合は、「citygml-tools / build / install」の下にcitygml-toolsパッケージがあるはずです.
