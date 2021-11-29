@@ -129,7 +129,7 @@ citygml-toolsはビルドシステムとして[Gradle]（https://gradle.org/） 
 ビルドが成功した場合は、「citygml-tools / build / install」の下にcitygml-tools パッケージが作られます.
 
 ## 日本のデータの変換について
-現在、CityJSON-Tools　が利用する空間参照系ライブラリでは、3D空間参照系間の参照系変換のための十分な環境整備ができていません。そのため、空間参照系の変換を行う際は、該当する2D空間参照系を利用して変換を行います。垂直方向では元となるデータの値を変換後もそのまま利用します。以下で具体的なコマンドを上げて、変換方法を説明します。
+現在、CityJSON-Tools　が利用する空間参照系ライブラリでは、3D空間参照系間の参照系変換のための十分な環境整備ができていません。そのため、空間参照系の変換を行う際は、該当する2D空間参照系を利用して変換を行います。高さ方向は一般的に変換による差が小さいため、実用上変換は不要であるとして、垂直方向では元となるデータの値を変換後もそのまま利用します。以下で具体的なコマンドを上げて、変換方法を説明します。
 - 例
 ```
 citygml-tools reproject --source-crs=6668 --target-crs=2451 --lenient-transform --target-force-xy data/53393330_bldg_6697_op2.gml
@@ -167,3 +167,6 @@ QGISのCityJSON Loaderに関する詳しい情報は以下を参照してくだ�
 ## CityJSONファイルの管理、操作
 CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利用することで、データのクリーンアップ、圧縮、マージ、空間参照系変換、分割、検証、などが行えます．cjioは、Pythonのスクリプトです．cjioの詳しい使い方は、[ホームページ] (https://github.com/cityjson/cjio) を参照してください．
 CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます．詳しくは、FMEの[CityJSON Reader/Writer] (https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください．
+
+## 日本語環境での利用に関する情報提供
+CityGML-Toolsを利用したデータ変換に関するは知見の収集と提供は、東京都デジタルサービス局として実施した。
