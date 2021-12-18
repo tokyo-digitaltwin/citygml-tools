@@ -132,10 +132,10 @@ citygml-toolsはビルドシステムとして[Gradle]（https://gradle.org/） 
 現在、CityJSON-Tools　が利用する空間参照系ライブラリでは、3D空間参照系間の参照系変換のための十分な環境整備ができていません。そのため、空間参照系の変換を行う際は、該当する2D空間参照系を利用して変換を行います。高さ方向は一般的に変換による差が小さいため、実用上変換は不要であるとして、垂直方向では元となるデータの値を変換後もそのまま利用します。以下で具体的なコマンドを上げて、変換方法を説明します。
 - 例
 ```
-citygml-tools reproject --source-crs=6668 --target-crs=2451 --lenient-transform --target-force-xy data/53393330_bldg_6697_op2.gml
+citygml-tools reproject --source-crs=6668 --target-crs=6677 --lenient-transform --target-force-xy data/53393330_bldg_6697_op2.gml
 ```
 - 解説
-	- 53393330_bldg_6697_op2.gml というCityGML形式のファイルを、平面直角座標系である EPSG:2451　に変換します。元となるデータの空間参照系は、3D参照系である EPSG:6697 ですが、2D参照系である EPSG:6668 を利用して変換しています。その際に、--lenient-transform オプションを使って、データのもともとの空間参照系が3Dであるのに対し、2D変換のみを行えるようにします。さらに、座標の記述順がx,yの順になるよう、--target-force-xy オプションを指定しています。
+	- 53393330_bldg_6697_op2.gml というCityGML形式のファイルを、平面直角座標系である EPSG:6677　に変換します。元となるデータの空間参照系は、3D参照系である EPSG:6697 ですが、2D参照系である EPSG:6668 を利用して変換しています。その際に、--lenient-transform オプションを使って、データのもともとの空間参照系が3Dであるのに対し、2D変換のみを行えるようにします。さらに、座標の記述順がx,yの順になるよう、--target-force-xy オプションを指定しています。
 
 # よく見られる実行エラーについて
 
