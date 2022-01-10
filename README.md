@@ -1,23 +1,23 @@
 # citygml-tools
-citygml-toolsは、CityGMLファイルを処理するためのいくつかの操作をバンドルするコマンドラインユーティリティです.
+citygml-toolsは、CityGMLファイルを処理するためのいくつかの操作をバンドルするコマンドラインユーティリティです。
 
 ## ライセンス
-citygml-toolsは、[Apache License、Version 2.0]（http://www.apache.org/licenses/LICENSE-2.0） の下でライセンスされています.
+citygml-toolsは、[Apache License、Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) の下でライセンスされています.
 詳細については、 `LICENSE`ファイルを参照してください。
 
 ## 最新のリリース
 citygml-toolsの最新の安定したリリースは1.4.3です.
 
-citygml-tools1.4.3 リリースバイナリをダウンロードします
-[ここ](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip) . 以前のバージョンは[リリースセクション](https://github.com/citygml4j/citygml-tools/releases) から入手できます.
+
+[ここから](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip) citygml-tools1.4.3 リリースバイナリをダウンロードできます. 以前のバージョンは[リリースセクション](https://github.com/citygml4j/citygml-tools/releases) から入手できます.
 
 ## 貢献するには
-- ソフトウェアで見つかったバグを報告するには、GitHubのissueを作成してください.
--　提出された問題を修正するためのコードを提供するには、問題IDを使用してプルリクエストを作成してください.
--　新しい機能を提案するには、GitHubのissueを作成し、ディスカッションを開始してください.
+- 本ソフトウェアで見つかったバグを報告するには、GitHubのissueを作成してください。
+-　提出された問題を修正するためのコードを提供するには、問題IDを使用してプルリクエストを作成してください。
+-　新しい機能を提案するには、GitHubのissueを作成し、ディスカッションを開始してください。
 
 ## citygml-tools の使用法
-最新リリースをダウンロードして解凍するかソースから[ビルド](https://github.com/citygml4j/citygml-tools#building) します. その後、シェル環境を開き、プログラムフォルダから `citygml-tools` スクリプトを実行してプログラムを起動します.
+最新リリースをダウンロードして解凍するかソースから[ビルド](https://github.com/citygml4j/citygml-tools#building) します。 その後、シェル環境を開き、プログラムフォルダから `citygml-tools` スクリプトを実行してプログラムを起動します。
 
 ヘルプメッセージとcitygml-toolsで使用可能なすべてのコマンドを表示するには、次のように入力します:
 
@@ -58,7 +58,7 @@ citygml-toolsの特定のコマンドに関するヘルプを取得するには�
 ## システム要件
 * Java JRE or JDK >= 1.8
   
-citygml-toolsは、適切なJavaサポートを提供する任意のプラットフォームで実行できます. 
+citygml-toolsは、適切なJavaサポートを提供する任意のプラットフォームで実行できます。
 
 ## Docker イメージ
 
@@ -75,27 +75,27 @@ dockerを介してcitygml-toolsを使用するのは簡単です:
  
      > docker run --rm citygml-tools
      
- すると、citygml-toolsのヘルプメッセージと使用可能なすべてのコマンドが表示されます.
+ すると、citygml-toolsのヘルプメッセージと使用可能なすべてのコマンドが表示されます。
  
- 次のコマンドは、ボリュームをマウントし、マウントされたボリューム内のすべてのCityGMLファイルに対してcitygml-toolsの `to-cityjson`コマンドを実行します.
+ 次のコマンドは、ボリュームをマウントし、マウントされたボリューム内のすべてのCityGMLファイルに対してcitygml-toolsの `to-cityjson`コマンドを実行します。
 
     > docker run --rm -u 1000 -v /path/to/your/data:/data citygml-tools to-cityjson /data
 
-`-u`パラメータを使用して、現在のホストのユーザーのユーザー名またはUIDを渡し、マウントされたディレクトリに生成されたファイルに正しいファイル権限を設定します.
+`-u`パラメータを使用して、現在のホストのユーザーのユーザー名またはUIDを渡し、マウントされたディレクトリに生成されたファイルに正しいファイル権限を設定します。
 
 ### 詳細な技術情報
 
-citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux を作成するイメージのサイズを小さくするために利用しています. さらに、マルチステージイメージとして記述され、「JDKイメージ」はビルドにのみ使用するため、最終的なアプリケーションはより小さな「JREイメージ」にラップされます.
+citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux を作成するイメージのサイズを小さくするために利用しています. さらに、マルチステージイメージとして記述され、「JDKイメージ」はビルドにのみ使用するため、最終的なアプリケーションはより小さな「JREイメージ」にラップされます。
 
-デフォルトでは、コンテナプロセスはroot以外のユーザーとして実行されます。含まれているエントリーポイントスクリプトを使用すると、コンテナーの開始時に任意のユーザーが作成される可能性のあるOpenShift環境でもイメージを使用できます.
+デフォルトでは、コンテナプロセスはroot以外のユーザーとして実行されます。含まれているエントリーポイントスクリプトを使用すると、コンテナーの開始時に任意のユーザーが作成される可能性のあるOpenShift環境でもイメージを使用できます。
 
-コンテナ内のデフォルトの作業ディレクトリは `/data` です.
+コンテナ内のデフォルトの作業ディレクトリは `/data` です。
 
 ## citygml-tools をライブラリとして利用
 
-citygml-toolsは単なるCLIプログラムではありません。ほとんどのコマンドは、個別のJARライブラリとしても利用できます。クラスパスの `lib`フォルダーからライブラリファイルを配置するだけで、citygml4jプロジェクトで操作を使用できます. `citygml-tools-common- <version> .jar`ライブラリは、すべてのコマンドに必須の依存関係をレンダリングします.
+citygml-toolsは単なるCLIプログラムではありません。ほとんどのコマンドは、個別のJARライブラリとしても利用できます。クラスパスの `lib`フォルダーからライブラリファイルを配置するだけで、citygml4jプロジェクトで操作を使用できます. `citygml-tools-common- <version> .jar`ライブラリは、すべてのコマンドに必須の依存関係をレンダリングします。
 
-ライブラリは、[Maven Central Repository]（https://search.maven.org/search?q=org.citygml4j.tools） から[Maven]（http://maven.apache.org/） アーティファクトとしても入手できます.　たとえば、Mavenを使用してプロジェクトにグローバルな外観を削除するための `global-app-mover`ライブラリを追加するには、次のコードを` pom.xml`に追加します. `global-app-mover`のバージョン番号を調整する必要があるかもしれません.
+ライブラリは、[Maven Central Repository](https://search.maven.org/search?q=org.citygml4j.tools) から[Maven](http://maven.apache.org/) アーティファクトとしても入手できます.　たとえば、Mavenを使用してプロジェクトにグローバルな外観を削除するための `global-app-mover`ライブラリを追加するには、次のコードを` pom.xml`に追加します. `global-app-mover`のバージョン番号を調整する必要があるかもしれません。
 
 ```xml
 <dependency>
@@ -117,16 +117,16 @@ dependencies {
 }
 ```
 
-個別のJARライブラリとして使用できないコマンドは、citygml4jを使用して数行のコードをだけで実装できます。ソースコードをチェックして、それらがどのように実装されているかを確認してください.
+個別のJARライブラリとして使用できないコマンドは、citygml4jを使用して数行のコードをだけで実装できます。ソースコードをチェックして、それらがどのように実装されているかを確認してください。
 
 ## ビルド
-citygml-toolsはビルドシステムとして[Gradle]（https://gradle.org/） を使用します。ソースからプログラムをビルドするには、リポジトリをローカルマシンに複製し、リポジトリのルートから次のコマンドを実行します.
+citygml-toolsはビルドシステムとして[Gradle](https://gradle.org/) を使用します。ソースからプログラムをビルドするには、リポジトリをローカルマシンに複製し、リポジトリのルートから次のコマンドを実行します。
 
     > gradlew installDist
     
-スクリプトは、citygml-toolsの構築と実行に必要なすべての依存関係を自動的にダウンロードします。したがって、インターネットに接続していることを確認してください.ビルドプロセスはすべての主要なオペレーティングシステムで実行され、実行には Java 8JDK 以上が必要です.
+スクリプトは、citygml-toolsの構築と実行に必要なすべての依存関係を自動的にダウンロードします。したがって、インターネットに接続していることを確認してください.ビルドプロセスはすべての主要なオペレーティングシステムで実行され、実行には Java 8JDK 以上が必要です。
 
-ビルドが成功した場合は、「citygml-tools / build / install」の下にcitygml-tools パッケージが作られます.
+ビルドが成功した場合は、「citygml-tools / build / install」の下にcitygml-tools パッケージが作られます。
 
 ## 日本のデータの変換について
 現在、CityJSON-Tools　が利用する空間参照系ライブラリでは、3D空間参照系間の参照系変換のための十分な環境整備ができていません。そのため、空間参照系の変換を行う際は、該当する2D空間参照系を利用して変換を行います。高さ方向は一般的に変換による差が小さいため、実用上変換は不要であるとして、垂直方向では元となるデータの値を変換後もそのまま利用します。以下で具体的なコマンドを上げて、変換方法を説明します。
@@ -147,7 +147,7 @@ picocli.CommandLine$ExecutionException: Error while calling command
 Caused by: org.opengis.referencing.operation.OperationNotFoundException: No transformation available from system "CompoundCRS[JGD2011 + JGD2011 (vertical) height]" to "GeographicCRS[WGS 84]".
 ...
 ```
-このエラーは、空間参照系変換のライブラリに、垂直方向の変換を含む変換のための空間参照系が定義されていないために発生します．水平方向のみの空間参照系変換を行うことでエラーを回避できます．
+このエラーは、空間参照系変換のライブラリに、垂直方向の変換を含む変換のための空間参照系が定義されていないために発生します。水平方向のみの空間参照系変換を行うことでエラーを回避できます。
 
 ```
 ...
@@ -155,18 +155,18 @@ Caused by: org.opengis.referencing.operation.OperationNotFoundException: No tran
 picocli.CommandLine$ExecutionException: Error while calling command (org.citygml4j.tools.command.ReprojectCommand@23faf8f2): org.geotools.referencing.wkt.UnformattableObjectException: This "GeographicCRS" object is too complex for WKT syntax. 
 ...
 ```
-日本のデータで頻繁に用いられる3D投影座標系（例えばEPSG:6697）を地理参照系であるWGS84の3D番である、EPSG4329に変換しようとした際に発生します．水平方向のみの空間参照系変換を行うことでエラーを回避できます．
+日本のデータで頻繁に用いられる3D投影座標系（例えばEPSG:6697）を地理参照系であるWGS84の3D番である、EPSG4329に変換しようとした際に発生します。水平方向のみの空間参照系変換を行うことでエラーを回避できます。
 
 ## 変換後のCityJsonの活用方法
-変換後のcityjson形式のファイルは、[QGIS](https://github.com/cityjson/cityjson-qgis-plugin) または [ninja](https://ninja.cityjson.org/) で表示できます．
-QGISで、CityJSON形式のデータを表示するには、CityJSON Loaderプラグインを利用します．「プラグイン」メニューから「プラグインの管理とインストール」を選択し、CityJSON Loaderを検索してインストールしてください．インストールが完了すると、「ベクタ」メニューから、「CityJSON Loader」が選べるようになります．プラグインのダイアログで、変換したCityJSONファイルを指定し、データをインポートしてください．
-QGISのCityJSON Loaderに関する詳しい情報は以下を参照してください．
+変換後のcityjson形式のファイルは、[QGIS](https://github.com/cityjson/cityjson-qgis-plugin) または [ninja](https://ninja.cityjson.org/) で表示できます。
+QGISで、CityJSON形式のデータを表示するには、CityJSON Loaderプラグインを利用します。「プラグイン」メニューから「プラグインの管理とインストール」を選択し、CityJSON Loaderを検索してインストールしてください。インストールが完了すると、「ベクタ」メニューから、「CityJSON Loader」が選べるようになります。プラグインのダイアログで、変換したCityJSONファイルを指定し、データをインポートしてください。
+QGISのCityJSON Loaderに関する詳しい情報は以下を参照してください。
 - https://onlinelibrary.wiley.com/doi/full/10.1111/tgis.12657
 - https://towardsdatascience.com/loading-3d-city-models-in-qgis-46347a638760
 
 ## CityJSONファイルの管理、操作
-CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利用することで、データのクリーンアップ、圧縮、マージ、空間参照系変換、分割、検証、などが行えます．cjioは、Pythonのスクリプトです．cjioの詳しい使い方は、[ホームページ] (https://github.com/cityjson/cjio) を参照してください．
-CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます．詳しくは、FMEの[CityJSON Reader/Writer] (https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください．
+CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利用することで、データのクリーンアップ、圧縮、マージ、空間参照系変換、分割、検証、などが行えます。cjioは、Pythonのスクリプトです。cjioの詳しい使い方は、[ホームページ] (https://github.com/cityjson/cjio) を参照してください。
+CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます。詳しくは、FMEの[CityJSON Reader/Writer] (https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください。
 
 ## 日本語環境での利用に関する情報提供
-CityGML-Toolsを利用したデータ変換に関するは知見の収集と提供は、東京都デジタルサービス局として実施した。
+CityGML-Toolsを利用したデータ変換に関するは知見の収集と提供は、東京都デジタルサービス局が実施しています。
