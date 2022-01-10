@@ -2,14 +2,14 @@
 citygml-toolsは、CityGMLファイルを処理するためのいくつかの操作をバンドルするコマンドラインユーティリティです。
 
 ## ライセンス
-citygml-toolsは、[Apache License、Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) の下でライセンスされています.
+citygml-toolsは、[Apache License、Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) の下でライセンスされています。
 詳細については、 `LICENSE`ファイルを参照してください。
 
 ## 最新のリリース
-citygml-toolsの最新の安定したリリースは1.4.3です.
+citygml-toolsの最新の安定したリリースは1.4.3です。
 
 
-[ここから](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip) citygml-tools1.4.3 リリースバイナリをダウンロードできます. 以前のバージョンは[リリースセクション](https://github.com/citygml4j/citygml-tools/releases) から入手できます.
+[ここから](https://github.com/citygml4j/citygml-tools/releases/download/v1.4.3/citygml-tools-1.4.3.zip) citygml-tools1.4.3 リリースバイナリをダウンロードできます。 以前のバージョンは[リリースセクション](https://github.com/citygml4j/citygml-tools/releases) から入手できます。
 
 ## 貢献するには
 - 本ソフトウェアで見つかったバグを報告するには、GitHubのissueを作成してください。
@@ -85,7 +85,7 @@ dockerを介してcitygml-toolsを使用するのは簡単です:
 
 ### 詳細な技術情報
 
-citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux を作成するイメージのサイズを小さくするために利用しています. さらに、マルチステージイメージとして記述され、「JDKイメージ」はビルドにのみ使用するため、最終的なアプリケーションはより小さな「JREイメージ」にラップされます。
+citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine Linux を作成するイメージのサイズを小さくするために利用しています。 さらに、マルチステージイメージとして記述され、「JDKイメージ」はビルドにのみ使用するため、最終的なアプリケーションはより小さな「JREイメージ」にラップされます。
 
 デフォルトでは、コンテナプロセスはroot以外のユーザーとして実行されます。含まれているエントリーポイントスクリプトを使用すると、コンテナーの開始時に任意のユーザーが作成される可能性のあるOpenShift環境でもイメージを使用できます。
 
@@ -93,9 +93,9 @@ citygml-toolsイメージは[OpenJDK](https://hub.docker.com/_/openjdk) Alpine L
 
 ## citygml-tools をライブラリとして利用
 
-citygml-toolsは単なるCLIプログラムではありません。ほとんどのコマンドは、個別のJARライブラリとしても利用できます。クラスパスの `lib`フォルダーからライブラリファイルを配置するだけで、citygml4jプロジェクトで操作を使用できます. `citygml-tools-common- <version> .jar`ライブラリは、すべてのコマンドに必須の依存関係をレンダリングします。
+citygml-toolsは単なるCLIプログラムではありません。ほとんどのコマンドは、個別のJARライブラリとしても利用できます。クラスパスの `lib`フォルダーからライブラリファイルを配置するだけで、citygml4jプロジェクトで操作を使用できます。 `citygml-tools-common- <version> .jar`ライブラリは、すべてのコマンドに必須の依存関係をレンダリングします。
 
-ライブラリは、[Maven Central Repository](https://search.maven.org/search?q=org.citygml4j.tools) から[Maven](http://maven.apache.org/) アーティファクトとしても入手できます.　たとえば、Mavenを使用してプロジェクトにグローバルな外観を削除するための `global-app-mover`ライブラリを追加するには、次のコードを` pom.xml`に追加します. `global-app-mover`のバージョン番号を調整する必要があるかもしれません。
+ライブラリは、[Maven Central Repository](https://search.maven.org/search?q=org.citygml4j.tools) から[Maven](http://maven.apache.org/) アーティファクトとしても入手できます。　たとえば、Mavenを使用してプロジェクトにグローバルな外観を削除するための `global-app-mover`ライブラリを追加するには、次のコードを` pom.xml`に追加します。 `global-app-mover`のバージョン番号を調整する必要があるかもしれません。
 
 ```xml
 <dependency>
@@ -124,7 +124,7 @@ citygml-toolsはビルドシステムとして[Gradle](https://gradle.org/) を�
 
     > gradlew installDist
     
-スクリプトは、citygml-toolsの構築と実行に必要なすべての依存関係を自動的にダウンロードします。したがって、インターネットに接続していることを確認してください.ビルドプロセスはすべての主要なオペレーティングシステムで実行され、実行には Java 8JDK 以上が必要です。
+スクリプトは、citygml-toolsの構築と実行に必要なすべての依存関係を自動的にダウンロードします。したがって、インターネットに接続していることを確認してください。ビルドプロセスはすべての主要なオペレーティングシステムで実行され、実行には Java 8JDK 以上が必要です。
 
 ビルドが成功した場合は、「citygml-tools / build / install」の下にcitygml-tools パッケージが作られます。
 
