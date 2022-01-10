@@ -13,8 +13,8 @@ citygml-toolsの最新の安定したリリースは1.4.3です。
 
 ## 貢献するには
 - 本ソフトウェアで見つかったバグを報告するには、GitHubのissueを作成してください。
--　提出された問題を修正するためのコードを提供するには、問題IDを使用してプルリクエストを作成してください。
--　新しい機能を提案するには、GitHubのissueを作成し、ディスカッションを開始してください。
+- 提出された問題を修正するためのコードを提供するには、問題IDを使用してプルリクエストを作成してください。
+- 新しい機能を提案するには、GitHubのissueを作成し、ディスカッションを開始してください。
 
 ## citygml-tools の使用法
 最新リリースをダウンロードして解凍するかソースから[ビルド](https://github.com/citygml4j/citygml-tools#building) します。 その後、シェル環境を開き、プログラムフォルダから `citygml-tools` スクリプトを実行してプログラムを起動します。
@@ -63,7 +63,7 @@ citygml-toolsは、適切なJavaサポートを提供する任意のプラット
 ## Docker イメージ
 
 
-citygml-toolsはDockerイメージとしても利用できます。提供されている `Dockerfile`を使用して自分でイメージをビルドするか、DockerHubからビルド済みのイメージを利用できます: https://hub.docker.com/r/citygml4j/citygml-tools.
+citygml-toolsはDockerイメージとしても利用できます。提供されている `Dockerfile`を使用して自分でイメージをビルドするか、[DockerHubからビルド済みのイメージを利用できます](https://hub.docker.com/r/citygml4j/citygml-tools).
 
 イメージをビルドするには、リポジトリをローカルマシンに複製し、リポジトリのルートから次のコマンドを実行します:
 
@@ -165,8 +165,8 @@ QGISのCityJSON Loaderに関する詳しい情報は以下を参照してくだ�
 - https://towardsdatascience.com/loading-3d-city-models-in-qgis-46347a638760
 
 ## CityJSONファイルの管理、操作
-CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利用することで、データのクリーンアップ、圧縮、マージ、空間参照系変換、分割、検証、などが行えます。cjioは、Pythonのスクリプトです。cjioの詳しい使い方は、[ホームページ] (https://github.com/cityjson/cjio) を参照してください。
-CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます。詳しくは、FMEの[CityJSON Reader/Writer] (https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください。
+CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利用することで、データのクリーンアップ、圧縮、マージ、空間参照系変換、分割、検証、などが行えます。cjioは、Pythonのスクリプトです。cjioの詳しい使い方は、[ホームページ](https://github.com/cityjson/cjio) を参照してください。
+CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます。詳しくは、FMEの [CityJSON Reader/Writer](https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください。
 
 ## 日本語環境での利用に関する情報提供
 CityGML-Toolsを利用したデータ変換に関するは知見の収集と提供は、東京都デジタルサービス局が実施しています。
