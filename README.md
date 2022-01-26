@@ -169,4 +169,4 @@ CityJSON形式のデータは、[cjio](https://github.com/cityjson/cjio) を利�
 CityJSON形式のデータは、商用ソフト[FME](https://www.safe.com/fme/) でも読込変換ができます。詳しくは、FMEの [CityJSON Reader/Writer](https://docs.safe.com/fme/html/FME_Desktop_Documentation/FME_ReadersWriters/cityjson/cityjson.htm) を参照してください。
 
 ## 日本語環境での利用に関する情報提供
-CityGML-Toolsを利用したデータ変換に関するは知見の収集と提供は、東京都デジタルサービス局が実施しています。
+CityGML-Toolsを利用したデータ変換に関する知見の収集と提供は、東京都デジタルサービス局が実施しています。
